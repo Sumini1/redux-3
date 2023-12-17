@@ -7,6 +7,8 @@ import ErrorComponent from "../Error";
 function ToDoComponents() {
   const dispatch = useDispatch();
   // since to exneed pert a single to do, we dont need to map throught an array
+  // useSelector untuk mendapat data dari state nya
+  // tot ini untuk datanya
   const todo = useSelector((state) => state.todos.todo);
   // status ini untuk status loading
   const status = useSelector((state) => state.todos.status);
@@ -14,7 +16,7 @@ function ToDoComponents() {
   const error = useSelector((state) => state.todos.error);
 
 
-  // tanpa triger, langsung loading
+  // tanpa triger, langsung loading tanpa button
   useEffect(() => {
     // dispatch fetchtodo
     dispatch(fetchToDo());

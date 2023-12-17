@@ -20,7 +20,7 @@ const todosSlice = createSlice({
   },
   //reducer sync
   reducers: {},
-  // reducer async
+  // reducer async, param builder
   extraReducers: (builder) => {
     builder
       // ini untuk loading, simpan ke state status
